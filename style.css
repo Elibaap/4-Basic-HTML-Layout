@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+  height: 100%;
+
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background: #38405f;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(2, 20px);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+  transition: all 0.3s ease-out;
+}
+.container:hover {
+  transform: translate(-50%, -50%) rotate(45deg);
+  transform-origin: center;
+}
+.container:hover .btn > i {
+  opacity: 1;
+}
+.container:hover .btn:first-of-type {
+  border-radius: 50%;
+  transform: scale(2) translate(-7px, -7px);
+}
+.container:hover .btn:first-of-type:hover {
+  background: #210099;
+}
+.container:hover .btn:nth-of-type(2) {
+  border-radius: 50%;
+  transform: scale(2) translate(7px, -7px);
+}
+.container:hover .btn:nth-of-type(2):hover {
+  background: #210099;
+}
+.container:hover .btn:nth-of-type(3) {
+  border-radius: 50%;
+  transform: scale(2) translate(-7px, 7px);
+}
+.container:hover .btn:nth-of-type(3):hover {
+  background: #210099;
+}
+.container:hover .btn:last-of-type {
+  border-radius: 50%;
+  transform: scale(2) translate(7px, 7px);
+}
+.container:hover .btn:last-of-type:hover {
+  background: #210099;
+}
+.container:hover .plus-icon {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.btn {
+  height: 20px;
+  background: #59546c;
+  transition: all 0.2s cubic-bezier(0.785, 0.135, 0.15, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn > i {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  opacity: 0;
+  transform: rotate(-45deg) scale(0.5);
+}
+.btn:first-of-type {
+  border-radius: 2px 0 0 0;
+  margin-bottom: -26px;
+}
+.btn:nth-of-type(2) {
+  border-radius: 0 2px 0 0;
+  margin-left: -1px;
+  margin-bottom: -26px;
+}
+.btn:nth-of-type(3) {
+  border-radius: 0 0 0 2px;
+  margin-top: -26px;
+}
+.btn:last-of-type {
+  border-radius: 0 0 2px 0;
+  margin-left: -1px;
+  margin-top: -26px;
+}
+
+.plus-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+}
